@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "groshevoy.com", "groshevoy.com\groshevoy.com.csproj", "{ADAB3A39-B84C-493D-AC0A-B465729746A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "groshevoy.com.Tests", "groshevoy.com.Tests\groshevoy.com.Tests.csproj", "{4D656C63-BB48-4FF0-A5BF-5596623474C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "groshevoy.com.Core", "groshevoy.com.Core\groshevoy.com.Core.csproj", "{12F92967-0321-40CF-B12B-7EF3E4CA9FE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADAB3A39-B84C-493D-AC0A-B465729746A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAB3A39-B84C-493D-AC0A-B465729746A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAB3A39-B84C-493D-AC0A-B465729746A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAB3A39-B84C-493D-AC0A-B465729746A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D656C63-BB48-4FF0-A5BF-5596623474C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D656C63-BB48-4FF0-A5BF-5596623474C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D656C63-BB48-4FF0-A5BF-5596623474C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D656C63-BB48-4FF0-A5BF-5596623474C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F92967-0321-40CF-B12B-7EF3E4CA9FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F92967-0321-40CF-B12B-7EF3E4CA9FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F92967-0321-40CF-B12B-7EF3E4CA9FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F92967-0321-40CF-B12B-7EF3E4CA9FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
