@@ -89,5 +89,46 @@ namespace groshevoy.com.Core
         {
             return _context.Tags.FirstOrDefault(t => t.UrlSlug.Equals(tagSlug));
         }
+
+		  public IList<Post> PostsForSearch(string search, int pageNo, int pageSize)
+		  {
+			  var query = _context.Posts
+										 .Where(p => p.Published && (p.Title.Contains(search) || p.Category.Name.Equals(search) || p.Tags.Any(t => t.Name.Equals(search))))
+										 .OrderByDescending(p => p.PostedOn)
+										 .Skip(pageNo * pageSize)
+										 .Take(pageSize)
+										 .Include(p => p.Category).Include(p => p.Tags);
+
+			  
+
+			  return query.ToList();
+		  }
+
+		  public int TotalPostsForSearch(string search)
+		  {
+			  return _context.Posts
+						 .Where(p => p.Published && (p.Title.Contains(search) || p.Category.Name.Equals(search) || p.Tags.Any(t => t.Name.Equals(search))))
+						 .Count();
+		  }
+
+		  public Post Post(int year, int month, string titleSlug)
+		  {
+			  var query = _context.Posts
+										 .Where(p => p.PostedOn.Year == year && p.PostedOn.Month == month && p.UrlSlug.Equals(titleSlug))
+										 .Include(p => p.Category).Include(p => p.Tags);
+
+
+			  return query.Single();
+		  }
+
+		  public IList<Category> Categories()
+		  {
+			  return _context.Categories.OrderBy(p => p.Name).ToList();
+		  }
+
+		  public IList<Tag> Tags()
+		  {
+			  return _context.Tags.OrderBy(p => p.Name).ToList();
+		  }
     }
 }
